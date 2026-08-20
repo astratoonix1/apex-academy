@@ -49,7 +49,8 @@
         <p class="text-xs text-slate-400 mb-8">Fill in your details below. Our senior academic mentor will reach out within 2 hours.</p>
 
         <form @submit.prevent="submitForm()" class="space-y-5">
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="b6ff3e0e-b522-422a-90b2-3bbf01714d03">
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
@@ -295,7 +296,7 @@
               method: 'POST',
               headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
               body: JSON.stringify({
-                access_key: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE',
+                access_key: 'b6ff3e0e-b522-422a-90b2-3bbf01714d03',
                 name: this.formData.name,
                 phone: this.formData.phone,
                 email: this.formData.email,
