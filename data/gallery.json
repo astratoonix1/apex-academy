@@ -1,0 +1,56 @@
+[
+  {
+    "id": "gal-01",
+    "title": "AIR 14 & AIR 32 Felicitation Ceremony 2026",
+    "category": "Toppers",
+    "thumbUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop",
+    "fullUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop",
+    "caption": "Celebrating our top rankers in JEE Advanced and NEET with the faculty board.",
+    "date": "July 2026"
+  },
+  {
+    "id": "gal-02",
+    "title": "Advanced Optics & Laser Physics Laboratory Session",
+    "category": "Classrooms",
+    "thumbUrl": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=600&auto=format&fit=crop",
+    "fullUrl": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1600&auto=format&fit=crop",
+    "caption": "Students performing hands-on optical bench diffraction experiments in Lab 3.",
+    "date": "May 2026"
+  },
+  {
+    "id": "gal-03",
+    "title": "Annual STEM Conclave & AI in Engineering Seminar",
+    "category": "Events",
+    "thumbUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=600&auto=format&fit=crop",
+    "fullUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1600&auto=format&fit=crop",
+    "caption": "Guest lecture delivered by renowned IIT Delhi and IISc Alumni professors.",
+    "date": "June 2026"
+  },
+  {
+    "id": "gal-04",
+    "title": "Smart Amphitheatre Lecture Hall — Batch Alpha",
+    "category": "Classrooms",
+    "thumbUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=600&auto=format&fit=crop",
+    "fullUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1600&auto=format&fit=crop",
+    "caption": "Acoustically treated lecture halls equipped with dual interactive smart displays.",
+    "date": "April 2026"
+  },
+  {
+    "id": "gal-05",
+    "title": "National Science Day Innovation Showcase",
+    "category": "Events",
+    "thumbUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=crop",
+    "fullUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop",
+    "caption": "Foundation students presenting functional robotics and IoT projects.",
+    "date": "February 2026"
+  },
+  {
+    "id": "gal-06",
+    "title": "Hall of Fame: 2026 Merit Board",
+    "category": "Toppers",
+    "thumbUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=600&auto=format&fit=crop",
+    "fullUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1600&auto=format&fit=crop",
+    "caption": "Recognizing 110+ students who achieved 99+ percentile in competitive exams.",
+    "date": "August 2026"
+  }
+]

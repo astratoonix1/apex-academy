@@ -1,0 +1,100 @@
+[
+  {
+    "id": "jee-adv-2027",
+    "title": "JEE Main & Advanced Pinnacle Batch",
+    "badge": "Flagship 2-Year Program",
+    "category": "Engineering",
+    "targetExam": "IIT-JEE 2027",
+    "duration": "24 Months",
+    "rating": 4.9,
+    "studentsEnrolled": 1420,
+    "price": "₹1,20,000",
+    "period": "per year",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
+    "description": "Comprehensive training for Class 11 & 12 students targeting top 500 AIR in JEE Advanced with personal mentor allocation.",
+    "features": [
+      "Daily 4-hour live interactive classroom sessions",
+      "Chapter-wise DPPs (Daily Practice Problems) with video solutions",
+      "Bi-weekly Computer Based Tests (CBT) matching NTA pattern",
+      "1-on-1 doubt clearing counters available 12 hours/day"
+    ],
+    "syllabus": [
+      {
+        "moduleTitle": "Physics: Mechanics to Electromagnetism",
+        "topics": ["Kinematics & Newton's Laws", "Rotational Dynamics", "Electrostatics & Current", "Electromagnetic Induction & Modern Physics"]
+      },
+      {
+        "moduleTitle": "Chemistry: Physical, Organic & Inorganic Integration",
+        "topics": ["Chemical Bonding & Periodic Trends", "Thermodynamics & Equilibrium", "Reaction Mechanisms & Stereochemistry", "Coordination Compounds"]
+      },
+      {
+        "moduleTitle": "Mathematics: Calculus & Coordinate Mastery",
+        "topics": ["Functions & Differential Calculus", "Integral Calculus & Differential Equations", "Conic Sections & Vectors 3D", "Probability & Matrices"]
+      }
+    ]
+  },
+  {
+    "id": "neet-super30",
+    "title": "NEET-UG Target Rankers Batch",
+    "badge": "Intensive Medical Prep",
+    "category": "Medical",
+    "targetExam": "NEET-UG 2026",
+    "duration": "12 Months",
+    "rating": 4.95,
+    "studentsEnrolled": 1850,
+    "price": "₹95,000",
+    "period": "per year",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
+    "description": "Rigorous NCERT line-by-line decoding with high-yield diagram drills and 700+ marks simulation tests.",
+    "features": [
+      "NCERT fingertip flashcards and diagram-based quizzes",
+      "36 Full-length OMR-based NEET mock drills with All-India ranking",
+      "Dedicated botanical and zoological lab specimen tours",
+      "Special error-analysis ledger per student"
+    ],
+    "syllabus": [
+      {
+        "moduleTitle": "Biology: 100% NCERT Coverage",
+        "topics": ["Genetics & Evolution", "Human Physiology Masterclass", "Ecology & Environment", "Cell Structure & Biomolecules"]
+      },
+      {
+        "moduleTitle": "Physics: Formula Application Drills",
+        "topics": ["Ray & Wave Optics", "Thermodynamics & Heat", "Modern Physics & Atoms", "Mechanics & Fluid Statics"]
+      },
+      {
+        "moduleTitle": "Chemistry: Rapid Problem Solving",
+        "topics": ["Organic Conversions & Name Reactions", "Equilibrium & Solutions", "p, d & f-Block Elements", "Biomolecules & Polymers"]
+      }
+    ]
+  },
+  {
+    "id": "foundation-9-10",
+    "title": "STEM Olympiad & Foundation Prodigy",
+    "badge": "Early Advantage",
+    "category": "Foundation",
+    "targetExam": "NSEJS / PRMO / Boards",
+    "duration": "10 Months",
+    "rating": 4.88,
+    "studentsEnrolled": 920,
+    "price": "₹65,000",
+    "period": "per year",
+    "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop",
+    "description": "Cultivating analytical problem-solving skills for early competitive success in IOQM, NTSE, and Olympiads.",
+    "features": [
+      "Logic, mental ability, and speed calculation training",
+      "Science laboratory experimentation workshops",
+      "Board exam answer sheet writing masterclasses",
+      "Continuous parent-teacher counseling loops"
+    ],
+    "syllabus": [
+      {
+        "moduleTitle": "Advanced Mathematics",
+        "topics": ["Number Theory & Modular Arithmetic", "Algebraic Identities & Polynomials", "Euclidean Geometry & Circle Theorems", "Combinatorics"]
+      },
+      {
+        "moduleTitle": "Conceptual Sciences",
+        "topics": ["Atomic Structure & Chemical Reactions", "Electricity & Magnetic Effects", "Life Processes & Heredity", "Light & Reflection"]
+      }
+    ]
+  }
+]
