@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Admissions | APEX Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased" x-data="contactApp()" x-init="checkUrlParams()">
+
+  <header class="sticky top-0 z-40 w-full backdrop-blur-xl bg-slate-950/70 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center">
+          <i class="fa-solid fa-graduation-cap text-xl text-white"></i>
+        </div>
+        <span class="text-2xl font-black tracking-tight text-white font-['Outfit']">APEX<span class="text-indigo-400">.</span>EDU</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-white transition">Home</a>
+        <a href="courses.html" class="hover:text-white transition">Programs & Batches</a>
+        <a href="materials.html" class="hover:text-white transition">Study Hub (PDFs)</a>
+        <a href="gallery.html" class="hover:text-white transition">Campus Gallery</a>
+        <a href="contact.html" class="text-indigo-400 font-semibold">Contact & Centers</a>
+      </nav>
+      <a href="tel:+919876543210" class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white">
+        <i class="fa-solid fa-phone text-indigo-400"></i> +91 98765 43210
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold tracking-widest text-indigo-400 uppercase">Admission & Inquiries</span>
+      <h1 class="text-4xl sm:text-5xl font-black text-white mt-2">Connect With Academic Counselors</h1>
+      <p class="text-slate-400 text-sm sm:text-base mt-2">Walk in for a 1-on-1 counseling session or submit your query online for instant guidance.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <div class="lg:col-span-7 glass-panel rounded-3xl p-8 sm:p-10 border border-slate-800">
+        <h2 class="text-2xl font-bold text-white mb-2">Book Free Diagnostic Session</h2>
+        <p class="text-xs text-slate-400 mb-8">Fill in your details below. Our senior academic mentor will reach out within 2 hours.</p>
+
+        <form @submit.prevent="submitForm()" class="space-y-5">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-2">Student Full Name *</label>
+              <input type="text" x-model="formData.name" required placeholder="e.g. Rahul Verma"
+                     class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-2">WhatsApp / Phone Number *</label>
+              <input type="tel" x-model="formData.phone" required placeholder="+91 98765 00000"
+                     class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-2">Email Address</label>
+              <input type="email" x-model="formData.email" placeholder="rahul@example.com"
+                     class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-2">Target Program / Batch *</label>
+              <input type="text" x-model="formData.course" required placeholder="e.g. JEE Main & Advanced"
+                     class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2">Questions or Current Preparation Level</label>
+            <textarea x-model="formData.message" rows="4" placeholder="Mention your current class, school, or any specific queries..."
+                      class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500"></textarea>
+          </div>
+
+          <button type="submit" :disabled="isSubmitting"
+                  class="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold text-xs uppercase tracking-wider transition shadow-xl shadow-indigo-600/30 flex items-center justify-center gap-2">
+            <span x-show="!isSubmitting">Send Application Now</span>
+            <span x-show="isSubmitting"><i class="fa-solid fa-spinner fa-spin mr-2"></i> Submitting...</span>
+          </button>
+
+          <div x-show="submissionSuccess" x-transition class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold text-center" x-cloak>
+            <i class="fa-solid fa-circle-check mr-1.5"></i> Inquiry submitted successfully! Our counselor will call you shortly.
+          </div>
+        </form>
+      </div>
+
+      <div class="lg:col-span-5 space-y-6">
+        
+        <div class="bg-gradient-to-br from-emerald-950/60 to-slate-900 rounded-3xl p-6 border border-emerald-500/30 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">Instant WhatsApp Helpdesk</h3>
+              <p class="text-[11px] text-emerald-400">Online &bull; Instant Response</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-300">Choose your target class to generate an instant pre-filled query for our admissions officer:</p>
+
+          <div class="grid grid-cols-2 gap-2">
+            <button @click="setWhatsAppClass('Class 11 IIT-JEE')" class="py-2 px-3 rounded-lg bg-slate-900 hover:bg-emerald-900/40 border border-slate-700 text-[11px] font-semibold text-slate-200 transition">
+              Class 11 (JEE)
+            </button>
+            <button @click="setWhatsAppClass('Class 12 NEET-UG')" class="py-2 px-3 rounded-lg bg-slate-900 hover:bg-emerald-900/40 border border-slate-700 text-[11px] font-semibold text-slate-200 transition">
+              Class 12 (NEET)
+            </button>
+            <button @click="setWhatsAppClass('Repeater / Dropper Batch')" class="py-2 px-3 rounded-lg bg-slate-900 hover:bg-emerald-900/40 border border-slate-700 text-[11px] font-semibold text-slate-200 transition">
+              Dropper Batch
+            </button>
+            <button @click="setWhatsAppClass('Foundation 9th-10th')" class="py-2 px-3 rounded-lg bg-slate-900 hover:bg-emerald-900/40 border border-slate-700 text-[11px] font-semibold text-slate-200 transition">
+              Foundation 9-10th
+            </button>
+          </div>
+
+          <a :href="whatsAppUrl" target="_blank" class="block w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center rounded-xl text-xs uppercase tracking-wider transition shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-base"></i> Open Pre-Filled Chat
+          </a>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-6 border border-slate-800 space-y-4">
+          <h3 class="text-sm font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-indigo-400"></i> Main Examination Center
+          </h3>
+          
+          <div class="w-full h-48 rounded-2xl overflow-hidden border border-slate-700">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14030.123456789!2d77.03687!3d28.45949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM0LjIiTiA3N8KwMDInMTIuNyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+              class="w-full h-full border-0 filter invert-[90%] hue-rotate-180 contrast-125"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+
+          <div class="text-xs text-slate-400 space-y-1.5 pt-2">
+            <p class="text-slate-200 font-semibold">Apex Corporate Towers, Sector 14, Main Road</p>
+            <p>Visiting Hours: Monday – Saturday (8:00 AM – 7:30 PM)</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function contactApp() {
+      return {
+        formData: {
+          name: '',
+          phone: '',
+          email: '',
+          course: '',
+          message: ''
+        },
+        selectedClass: 'Class 11 IIT-JEE',
+        isSubmitting: false,
+        submissionSuccess: false,
+        checkUrlParams() {
+          const params = new URLSearchParams(window.location.search);
+          const courseParam = params.get('course');
+          if (courseParam) {
+            this.formData.course = decodeURIComponent(courseParam);
+          }
+        },
+        setWhatsAppClass(className) {
+          this.selectedClass = className;
+        },
+        get whatsAppUrl() {
+          const text = `Hi Apex Academy, I want admission guidance for ${this.selectedClass}. Please share test dates and fee structure.`;
+          return `https://wa.me/919876543210?text=${encodeURIComponent(text)}`;
+        },
+        async submitForm() {
+          this.isSubmitting = true;
+          try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify({
+                access_key: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE',
+                name: this.formData.name,
+                phone: this.formData.phone,
+                email: this.formData.email,
+                course: this.formData.course,
+                message: this.formData.message
+              })
+            });
+            const result = await response.json();
+            if (result.success) {
+              this.submissionSuccess = true;
+              this.formData = { name: '', phone: '', email: '', course: '', message: '' };
+            }
+          } catch (e) {
+            console.error('Submission failed:', e);
+          } finally {
+            this.isSubmitting = false;
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
