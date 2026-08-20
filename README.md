@@ -1,7 +1,7 @@
 <div align="center">
   <!-- Animated Typing Title -->
   <a href="https://github.com/RajDev">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=800&size=40&duration=4000&pause=1000&color=6366F1&center=true&vCenter=true&width=800&height=80&lines=APEX+ACADEMY+WEB+PLATFORM;NEXT-GEN+EDTECH+ARCHITECTURE;ENGINEERED+BY+RAJ+DEV" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=800&size=40&duration=4000&pause=1000&color=6366F1&center=true&vCenter=true&width=800&height=80&lines=APEX+ACADEMY+WEB+PLATFORM;GEN+EDTECH+ARCHITECTURE;ENGINEERED+BY+RAJ+DEV" alt="Typing SVG" />
   </a>
   <br><br>
   
